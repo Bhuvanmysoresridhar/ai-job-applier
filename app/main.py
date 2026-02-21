@@ -4,7 +4,7 @@ from contextlib import asynccontextmanager
 from loguru import logger
 from app.config import settings
 from app.database import init_db
-from app.api import auth, profile, resume
+from app.api import auth, profile, resume, jobs
 
 
 @asynccontextmanager
@@ -34,6 +34,7 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(profile.router)
 app.include_router(resume.router)
+app.include_router(jobs.router)
 
 
 @app.get("/")

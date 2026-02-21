@@ -1,1 +1,1 @@
-from app.api import auth, profile, resume
+from app.api import auth, profile, resume, jobs
